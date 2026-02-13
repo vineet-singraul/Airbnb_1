@@ -1,0 +1,689 @@
+.light-theme {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #000000;
+  --text-secondary: #6c757d;
+  --border-color: #000000;
+  --header-bg: #ffffff;
+  --card-bg: #ffffff;
+  --hover-bg: #f8f9fa;
+  --icon-color: #000000;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+ /* border: "1px solid var(--border-color)",
+ color: "var(--text-primary)", 
+ backgroundColor: "var(--card-bg)", */
+
+
+
+/* Dark Theme - Black Background with White Text */
+.dark-theme {
+  --bg-primary: #000000;
+  --bg-secondary: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #adb5bd;
+  --border-color: #ffffff;
+  --header-bg: #000000;
+  --card-bg: #121212;
+  --hover-bg: #1a1a1a;
+  --icon-color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Apply to ALL elements */
+.light-theme,
+.dark-theme {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+/* Apply theme to body and html */
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ALL headings with both themes */
+.light-theme h1,
+.dark-theme h1,
+.light-theme h2,
+.dark-theme h2,
+.light-theme h3,
+.dark-theme h3,
+.light-theme h4,
+.dark-theme h4,
+.light-theme h5,
+.dark-theme h5,
+.light-theme h6,
+.dark-theme h6,
+.light-theme strong,
+.dark-theme strong,
+.light-theme a,
+.dark-theme a,
+.light-theme label,
+.dark-theme label,
+.light-theme .mui-box,
+.dark-theme .mui-box {
+  color: var(--text-primary) !important;
+}
+
+
+.light-theme #ButtonHai,
+.dark-theme #ButtonHai {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary) !important;
+  box-shadow: inset 0 0 10px rgba(113, 0, 0, 0.756) !important;
+}
+
+
+.light-theme #mainBox,
+.dark-theme #mainBox {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary) !important;
+  border: var(--border-color) !important;
+  box-shadow: 0px 4px 12px var(--text-primary);
+}
+
+
+/* ALL paragraphs with both themes */
+.light-theme p,
+.dark-theme p {
+  color: var(--text-primary) !important;
+}
+
+/* ALL spans with both themes */
+.light-theme span,
+.dark-theme span {
+  color: var(--text-primary) !important;   
+}
+
+
+.light-theme .bgColorHai,
+.dark-theme .bgColorHai {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+.light-theme #MainId,
+.dark-theme #MainId {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+/* Icons styling */
+.light-theme svg,
+.dark-theme svg,
+.light-theme .iconsmin,
+.dark-theme .iconsmin,
+.light-theme #animations,
+.dark-theme #animations,
+.light-theme #rounded,
+.dark-theme #rounded {
+  color: var(--icon-color) !important;
+  fill: var(--icon-color) !important;
+}
+
+/* React Icons specific */
+.light-theme .me-3,
+.dark-theme .me-3,
+.light-theme .fs-3,
+.dark-theme .fs-3,
+.light-theme .fs-4,
+.dark-theme .fs-4,
+.light-theme .fs-5,
+.dark-theme .fs-5 {
+  color: var(--icon-color) !important;
+}
+
+/* Material UI Icons */
+.light-theme .MuiSvgIcon-root,
+.dark-theme .MuiSvgIcon-root {
+  color: var(--icon-color) !important;
+}
+
+/* Header */
+.light-theme header,
+.dark-theme header {
+  background-color: var(--header-bg) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Hamburger Menu */
+.light-theme .hanmburgerClickDiv,
+.dark-theme .hanmburgerClickDiv {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .hanmburgerClickDiv a,
+.dark-theme .hanmburgerClickDiv a,
+.light-theme .hanmburgerClickDiv li,
+.dark-theme .hanmburgerClickDiv li,
+.light-theme .hanmburgerClickDiv .d-flex,
+.dark-theme .hanmburgerClickDiv .d-flex {
+  color: var(--text-primary) !important;
+}
+
+.light-theme .hanmburgerClickDiv h1,
+.dark-theme .hanmburgerClickDiv h1 {
+  color: var(--text-primary) !important;
+}
+
+/* Search Bar */
+.light-theme .search-bar,
+.dark-theme .search-bar {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .search-field input,
+.dark-theme .search-field input {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.light-theme .search-field input::placeholder,
+.dark-theme .search-field input::placeholder {
+  color: var(--text-secondary);
+}
+
+.light-theme .search-field label,
+.dark-theme .search-field label {
+  color: var(--text-primary);
+}
+
+/* Material-UI components */
+.light-theme .MuiPaper-root,
+.dark-theme .MuiPaper-root {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.light-theme .MuiMenuItem-root,
+.dark-theme .MuiMenuItem-root {
+  color: var(--text-primary) !important;
+  background-color: var(--card-bg) !important;
+}
+
+.light-theme .MuiMenuItem-root:hover,
+.dark-theme .MuiMenuItem-root:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+/* Search button */
+.light-theme .search-btn,
+.dark-theme .search-btn {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.light-theme .search-btn:hover,
+.dark-theme .search-btn:hover {
+  opacity: 0.9;
+}
+
+/* Icon containers */
+.light-theme .icondiv,
+.dark-theme .icondiv {
+  border-color: var(--border-color);
+  background-color: var(--bg-secondary);
+}
+
+.light-theme .icondiv:hover,
+.dark-theme .icondiv:hover {
+  background-color: var(--hover-bg);
+}
+
+/* All links */
+.light-theme a,
+.dark-theme a {
+  color: var(--text-primary) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.light-theme a:hover,
+.dark-theme a:hover {
+  color: var(--text-secondary) !important;
+}
+
+/* HR styling */
+.light-theme hr,
+.dark-theme hr {
+  border-color: var(--border-color) !important;
+  background-color: var(--border-color) !important;
+}
+
+/* Buttons */
+.light-theme .borders,
+.dark-theme .borders {
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+  background-color: var(--bg-secondary);
+}
+
+/* Text color classes */
+.light-theme .text-danger,
+.dark-theme .text-danger {
+  color: #dc3545 !important;
+}
+
+.light-theme .text-white,
+.dark-theme .text-white {
+  color: var(--text-primary) !important;
+}
+
+.light-theme .text-primary,
+.dark-theme .text-primary {
+  color: var(--text-primary) !important;
+}
+
+/* Center navigation */
+.light-theme .centrFirst,
+.dark-theme .centrFirst {
+  color: var(--text-primary);
+}
+
+.light-theme .centrFirst.active,
+.dark-theme .centrFirst.active {
+  border-bottom: 2px solid var(--text-primary);
+}
+
+.light-theme #centrP,
+.dark-theme #centrP {
+  color: var(--text-primary);
+}
+
+/* Wishlist count */
+.light-theme #countWish,
+.dark-theme #countWish {
+  color: var(--text-primary);
+  background-color: var(--icon-color);
+}
+
+/* Transitions for smooth theme switching */
+* {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease,
+              fill 0.3s ease;
+}
+
+
+
+
+
+
+
+
+/* ===============================
+   MUI INPUTS & FORMS
+================================ */
+/* .light-theme .MuiInputBase-root,
+.dark-theme .MuiInputBase-root {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary);
+}
+
+.light-theme .MuiOutlinedInput-notchedOutline,
+.dark-theme .MuiOutlinedInput-notchedOutline {
+  border-color: var(--border-color) !important;
+}
+
+.light-theme .MuiInputLabel-root,
+.dark-theme .MuiInputLabel-root {
+  color: var(--text-secondary) !important;
+}
+
+.light-theme .MuiInputLabel-root.Mui-focused,
+.dark-theme .MuiInputLabel-root.Mui-focused {
+  color: var(--text-primary) !important;
+} */
+
+/* ===============================
+
+
+
+
+
+/* ===============================
+   MUI CHECKBOX / RADIO / SWITCH
+================================ */
+.light-theme .MuiCheckbox-root,
+.dark-theme .MuiCheckbox-root,
+.light-theme .MuiRadio-root,
+.dark-theme .MuiRadio-root,
+.light-theme .MuiSwitch-root,
+.dark-theme .MuiSwitch-root {
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI SELECT / DROPDOWN
+================================ */
+/* .light-theme .MuiSelect-select,
+.dark-theme .MuiSelect-select {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary) !important;
+}
+
+.light-theme .MuiMenu-paper,
+.dark-theme .MuiMenu-paper {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+} */
+
+
+
+/* ===============================
+   MUI DIALOG / MODAL
+================================ */
+.light-theme .MuiDialog-paper,
+.dark-theme .MuiDialog-paper {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI TOOLTIP
+================================ */
+.light-theme .MuiTooltip-tooltip,
+.dark-theme .MuiTooltip-tooltip {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI TABLE
+================================ */
+.light-theme .MuiTableCell-root,
+.dark-theme .MuiTableCell-root {
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.light-theme .MuiTableRow-root:hover,
+.dark-theme .MuiTableRow-root:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+/* ===============================
+   MUI TABS
+================================ */
+.light-theme .MuiTab-root,
+.dark-theme .MuiTab-root {
+  color: var(--text-secondary) !important;
+}
+
+.light-theme .MuiTab-root.Mui-selected,
+.dark-theme .MuiTab-root.Mui-selected {
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI SNACKBAR / ALERT
+================================ */
+/* .light-theme .MuiAlert-root,
+.dark-theme .MuiAlert-root {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+} */
+
+
+
+
+
+
+
+
+/* ===============================
+   MUI DATA GRID – LIGHT / DARK
+================================ */
+
+/* Main DataGrid root */
+.light-theme .MuiDataGrid-root,
+.dark-theme .MuiDataGrid-root {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Column headers */
+.light-theme .MuiDataGrid-columnHeaders,
+.dark-theme .MuiDataGrid-columnHeaders {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Header titles */
+.light-theme .MuiDataGrid-columnHeaderTitle,
+.dark-theme .MuiDataGrid-columnHeaderTitle {
+  color: var(--text-primary) !important;
+}
+
+/* Rows */
+.light-theme .MuiDataGrid-row,
+.dark-theme .MuiDataGrid-row {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Row hover */
+.light-theme .MuiDataGrid-row:hover,
+.dark-theme .MuiDataGrid-row:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+/* Cells */
+.light-theme .MuiDataGrid-cell,
+.dark-theme .MuiDataGrid-cell {
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Footer / Pagination */
+.light-theme .MuiDataGrid-footerContainer,
+.dark-theme .MuiDataGrid-footerContainer {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+/* Checkbox */
+.light-theme .MuiDataGrid-checkboxInput svg,
+.dark-theme .MuiDataGrid-checkboxInput svg {
+  fill: var(--text-primary) !important;
+}
+
+/* Selected row */
+.light-theme .MuiDataGrid-row.Mui-selected,
+.dark-theme .MuiDataGrid-row.Mui-selected {
+  background-color: var(--hover-bg) !important;
+}
+
+/* No rows / Loading overlay */
+.light-theme .MuiDataGrid-overlay,
+.dark-theme .MuiDataGrid-overlay {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+
+.light-theme #mainBox .MuiDataGrid-root,
+.dark-theme #mainBox .MuiDataGrid-root {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   MUI BUTTON
+================================ */
+.light-theme .MuiButton-root,
+.dark-theme .MuiButton-root {
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* ===============================
+   MUI ICON BUTTON
+================================ */
+.light-theme .MuiIconButton-root,
+.dark-theme .MuiIconButton-root {
+  color: var(--icon-color) !important;
+}
+
+/* ===============================
+   MUI AVATAR
+================================ */
+.light-theme .MuiAvatar-root,
+.dark-theme .MuiAvatar-root {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI CARD
+================================ */
+.light-theme .MuiCard-root,
+.dark-theme .MuiCard-root {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* ===============================
+   MUI CARD CONTENT
+================================ */
+.light-theme .MuiCardContent-root,
+.dark-theme .MuiCardContent-root {
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI TYPOGRAPHY
+================================ */
+.light-theme .MuiTypography-root,
+.dark-theme .MuiTypography-root {
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI DIVIDER
+================================ */
+.light-theme .MuiDivider-root,
+.dark-theme .MuiDivider-root {
+  border-color: var(--border-color) !important;
+}
+
+/* ===============================
+   MUI FORM CONTROL
+================================ */
+.light-theme .MuiFormControl-root,
+.dark-theme .MuiFormControl-root {
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI TEXTFIELD / INPUT
+================================ */
+.light-theme .MuiInputBase-root,
+.dark-theme .MuiInputBase-root {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary) !important;
+}
+
+.light-theme .MuiOutlinedInput-root,
+.dark-theme .MuiOutlinedInput-root {
+  background-color: var(--bg-primary) !important;
+}
+
+.light-theme .MuiOutlinedInput-notchedOutline,
+.dark-theme .MuiOutlinedInput-notchedOutline {
+  border-color: var(--border-color) !important;
+}
+
+/* ===============================
+   MUI SELECT
+================================ */
+.light-theme .MuiSelect-root,
+.dark-theme .MuiSelect-root {
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI DIALOG PARTS
+================================ */
+.light-theme .MuiDialogTitle-root,
+.dark-theme .MuiDialogTitle-root,
+.light-theme .MuiDialogContent-root,
+.dark-theme .MuiDialogContent-root,
+.light-theme .MuiDialogContentText-root,
+.dark-theme .MuiDialogContentText-root,
+.light-theme .MuiDialogActions-root,
+.dark-theme .MuiDialogActions-root {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI GRID / STACK / BOX
+================================ */
+.light-theme .MuiGrid-root,
+.dark-theme .MuiGrid-root,
+.light-theme .MuiStack-root,
+.dark-theme .MuiStack-root,
+.light-theme .MuiBox-root,
+.dark-theme .MuiBox-root {
+  color: var(--text-primary) !important;
+}
+
+/* ===============================
+   MUI CONTAINER
+================================ */
+.light-theme .MuiContainer-root,
+.dark-theme .MuiContainer-root {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}

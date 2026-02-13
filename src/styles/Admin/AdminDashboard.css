@@ -1,0 +1,144 @@
+#BookinCharts,
+#UsersCharts {
+  width: 70vw;
+  background-color: #00292fff;
+}
+
+#mainBox {
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+}
+
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  #BookinCharts,
+  #UsersCharts {
+    width: 86vw;
+  }
+}
+
+#datagrid {
+  width: 80vw;
+  position: absolute;
+  left: 10px;
+  right: 0px;
+  background-color: yellow;
+}
+
+
+
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  #BookinCharts,
+  #UsersCharts {
+    width: 100vw; /* full width on mobile */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* MAIN CONTAINER */
+#MainDivHostAdmin {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content:space-between;
+  align-items: flex-start;
+  width: 83vw;
+  margin: 20px auto;
+  position: relative;
+}
+
+/* CHILD CARDS */
+#ChileAdminHost {
+  flex: 1 1 450px; /* responsive width, min 450px */
+  max-width: 500px;
+  background: linear-gradient(145deg, #d4d4d4, #350000ff);
+  margin: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#ChileAdminHost:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(228, 0, 0, 0.52);
+}
+
+/* MUI CARD OVERRIDE */
+#ChileAdminHost .MuiCard-root {
+  background: transparent; 
+  box-shadow: none;
+}
+
+/* RESPONSIVE GRID FIXES */
+@media (max-width: 1200px) {
+  #MainDivHostAdmin {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  #ChileAdminHost {
+    flex: 1 1 400px;
+    max-width: 420px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  #MainDivHostAdmin {
+    width: 95vw;
+    gap: 15px;
+  }
+
+  #ChileAdminHost {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Stack elements vertically on mobile */
+  #ChileAdminHost .MuiStack-root {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+  }
+
+  #ChileAdminHost .MuiBox-root {
+    width: 100%;
+  }
+
+  #ChileAdminHost .MuiStack-root.MuiStack-directionRow {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* MOBILE AVATAR CENTERING */
+@media (max-width: 480px) {
+  #ChileAdminHost .MuiAvatar-root {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  #ChileAdminHost .MuiTypography-root {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  #ChileAdminHost .MuiStack-root.MuiStack-spacing-xs-2 {
+    justify-content: center;
+  }
+
+  #ChileAdminHost .MuiChip-root {
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,395 @@
+/* PropertyCards.css */
+.property-cards-container {
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Loading Animation */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #333;
+  border-top: 3px solid #ff385c;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Compact Grid Layout */
+.property-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+/* Small Card Design */
+.property-card-compact {
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  opacity: 0;
+  animation: cardEntrance 0.6s ease-out forwards;
+  border: 1px solid #333;
+}
+
+.property-card-compact:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+  border-color: #555;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Compact Image Section */
+.property-image-compact {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.property-main-image-compact {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.property-card-compact:hover .property-main-image-compact {
+  transform: scale(1.05);
+}
+
+.property-image-placeholder-compact {
+  height: 180px;
+  background: linear-gradient(135deg, #333 0%, #666 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Wishlist Button */
+.wishlist-btn-compact {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.wishlist-btn-compact:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+.wishlist-btn-compact.active {
+  background: #ff385c;
+}
+
+.heart-icon-compact {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  transition: all 0.3s ease;
+}
+
+.wishlist-btn-compact:not(.active) .heart-icon-compact {
+  color: #fff;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.wishlist-btn-compact.active .heart-icon-compact {
+  color: white;
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Compact Content Section */
+.property-content-compact {
+  padding: 1rem;
+  position: relative;
+}
+
+.property-header-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.property-title-compact {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+  margin: 0;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Rating Styles */
+.rating-compact {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #000;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 8px;
+  flex-shrink: 0;
+  border: 1px solid #333;
+}
+
+.star-icon-compact {
+  width: 12px;
+  height: 12px;
+  fill: #ff385c;
+}
+
+/* Location and Details */
+.property-location-compact {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-size: 0.8rem;
+}
+
+.location-icon-compact {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.property-details-compact {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #333;
+}
+
+.detail-item-compact {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #ccc;
+  font-size: 0.75rem;
+}
+
+.detail-icon-compact {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+/* Price Section */
+.property-price-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-section-compact {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-amount-compact {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.price-period-compact {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.book-now-btn-compact {
+  background: linear-gradient(135deg, #ff385c, #e61e4d);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+.property-card-compact:hover .book-now-btn-compact {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.book-now-btn-compact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 56, 92, 0.4);
+}
+
+/* Badges */
+.property-badges-compact {
+  position: absolute;
+  top: -8px;
+  left: 1rem;
+  display: flex;
+  gap: 6px;
+}
+
+.badge-compact {
+  background: #ff385c;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* No Properties */
+.no-properties {
+  text-align: center;
+  padding: 3rem;
+  color: #ccc;
+}
+
+.no-properties h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-grid-compact {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .property-cards-container {
+    padding: 0.5rem;
+  }
+
+  .book-now-btn-compact {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Staggered Animation for Cards */
+.property-card-compact:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.property-card-compact:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.property-card-compact:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.property-card-compact:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.property-card-compact:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.property-card-compact:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+#heartDiv {
+  background-color: red !important;
+}
+
+#HeartIcon {
+  position: absolute;
+  top: -166px;
+  right: 22px;
+  font-size: 40px;
+  padding: 9px;
+  color: red !important;
+  background: #000000;
+  border: 1px solid red;
+  border-radius: 22px;
+  z-index: 100000;
+  cursor: pointer;
+}
+
+.buttonss {
+  padding: 5px 30px;
+  margin: 20px;
+  background: linear-gradient(45deg, #000000f5, #4300d282);
+  font-family: monospace;
+  border-left: 2px solid red;
+  border-bottom: 2px solid blue;
+  border-right: 2px solid #00b981;
+  border-top: 2px solid rgb(191, 1, 33);
+  border-radius: 10px;
+  font-size: 17px;
+  position: fixed;
+  right: 27px;
+  top: 63px;
+  z-index: 1000;
+}

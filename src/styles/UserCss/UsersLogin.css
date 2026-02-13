@@ -1,0 +1,40 @@
+#Boxs {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #430bde 0%, #23045e 100%);
+  padding: 16px; /* MUI spacing 2 = 16px */
+}
+
+
+
+#paperBox {
+  width: 380px;
+  padding: 40px 35px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+#buttonClick {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    border-radius: 9px;
+    font-size: 17px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #f857a6, #ff5858);
+    box-shadow: 0 4px 20px rgba(255, 88, 88, 0.5);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#buttonClick:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(255, 100, 100, 0.7);
+}

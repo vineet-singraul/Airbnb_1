@@ -1,0 +1,153 @@
+body {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+
+  font-family: "Inter", sans-serif;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #1c1c1c;
+    border-radius: 9999px;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    width: fit-content;
+    position: absolute;
+    top: 85px;
+    left: 30%;
+    z-index: 100;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px;
+  flex: 1;
+}
+
+.search-field label {
+  font-size: 12px;
+  color: #b1b1b1;
+  margin-bottom: 2px;
+}
+
+.search-field input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #d3d3d3;
+  font-size: 14px;
+}
+
+.divider {
+  width: 1px;
+  height: 30px;
+  background-color: #2f2f2f;
+}
+
+.search-btn {
+  background: linear-gradient(90deg, #b30059, #d63384);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.search-btn:hover {
+  background: linear-gradient(90deg, #d63384, #b30059);
+}
+
+@media (max-width: 700px) {
+  .search-bar {
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 10000;
+  }
+  .divider {
+    display: none;
+  }
+  .search-field {
+    width: 100%;
+    border-bottom: 1px solid #2f2f2f;
+  }
+  .search-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .search-bar {
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.968);
+        color: white;
+        width: fit-content;
+        position: absolute;
+        top: 71px;
+        left: 55px;
+  }
+}
+
+
+
+
+
+.carousel-item {
+  height: 90vh; 
+  min-height: 400px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 90%;
+  height: 90vh;
+      opacity: 0.8;
+}
+
+.carousel-inner {
+  width:100%;
+}
+
+.carousel {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#sliderid {
+    border-left: 2px solid rgb(0, 0, 0);
+    border-right: 2px solid blue;
+    border-top: 2px solid rgb(182, 0, 30);
+    border-bottom: 2px solid rgb(0, 114, 181);
+    position: absolute;
+    top: 42%;
+    bottom: 36%;
+    background: linear-gradient(45deg, #000000be, #070573af);
+    font-weight: 500;
+    font-family: monospace;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 90vh;
+  }
+  .carousel-item img {
+    height: 90vh;
+  }
+}

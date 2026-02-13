@@ -1,0 +1,22 @@
+#MainTwoColoum {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Important */
+}
+
+/* Default (Desktop) */
+#MainTwoColoum > * {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  #MainTwoColoum {
+    flex-direction: column;
+  }
+
+  #MainTwoColoum > * {
+    width: 100%;
+  }
+}

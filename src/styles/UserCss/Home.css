@@ -1,0 +1,308 @@
+* {
+  color: #ffffff !important;
+}
+
+/* Disable text selection */
+body,
+div,
+p,
+span {
+  user-select: none; /* Standard */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.airbnb-header {
+  font-family: "Poppins", sans-serif;
+}
+
+.airbnb-logo {
+  height: 32px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+.become-host {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.become-host:hover {
+  color: #ff385c;
+}
+
+.links {
+  text-decoration: none;
+}
+
+#navLinkTest {
+  font-size: 10px !important;
+  text-decoration: none;
+}
+
+.left {
+  position: relative;
+  top: -3px;
+  height: 49px;
+  background: linear-gradient(45deg, #00000029, transparent, #00000045);
+}
+
+/* Center Navigation Styles */
+.centerDiv {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 60px !important;
+  background-color: transparent !important;
+}
+
+.centrFirst {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  color: #c4c4c4;
+  transition: all 0.3s ease;
+}
+
+.centrFirst img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 4px;
+  transition: transform 0.3s ease;
+}
+
+.centrFirst p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #c4c4c4;
+}
+
+.centrFirst:hover img {
+  transform: scale(1.1);
+}
+
+.centrFirst:hover p {
+  color: #fff;
+}
+
+/* Active Tab */
+.centrFirst.active p {
+  color: #fff;
+}
+
+.centrFirst.active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* NEW badge for 2nd and 3rd items */
+.newBadge {
+  position: absolute;
+  top: -5px;
+  right: -20px;
+  background: #001f3f;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+/* Default: visible on all screens */
+.centerDiv {
+  display: block; /* or flex/grid depending on your layout */
+}
+
+#hosttext {
+  color: #ffffff83 !important;
+  font-size: 10px;
+}
+
+/* Hide on screens 600px and wider */
+@media (max-width: 600px) {
+  .centerDiv {
+    position: fixed;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgb(0, 0, 0) !important;
+  }
+  #minHost {
+    font-size: 12px;
+  }
+  #lastDiv {
+    position: absolute;
+    right: -10px;
+  }
+  #centrP {
+    display: none;
+  }
+
+  .centrFirst.active::after {
+    bottom: 2px;
+    transform: translateX(-50%);
+    width: 55px;
+    height: 55px;
+    z-index: 0;
+    border-radius:20px;
+    background-color: #3c39396e;
+    border: 1px solid rgb(0, 139, 160);
+  }
+  #hosttext {
+    color: #ffffff83 !important;
+    font-size: 7px;
+  }
+  .centrFirst img {
+    z-index: 10;
+  }
+  .newBadge {
+    z-index: 10;
+}
+}
+
+.hanmburgerClickDiv {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background: #000000;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  width: 220px;
+  padding: 4px 0;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.hamdisplay {
+  display: none;
+}
+
+.hanmburgerClickDiv ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hanmburgerClickDiv ul li {
+  display: block;
+  padding: 0px 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hanmburgerClickDiv ul li:hover {
+  background-color: #5e5e5e8a;
+}
+
+.hanmburgerClickDiv ul li hr {
+  margin: 6px 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+.hanmburgerClickDiv ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  display: block;
+}
+
+.hanmburgerClickDiv ul li a:hover {
+  color: #ff385c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .hanmburgerClickDiv {
+    width: 180px;
+    right: 5px;
+  }
+}
+
+#animations {
+  animation: dropdownRotate 0.4s ease forwards;
+}
+
+@keyframes dropdownRotate {
+  0% {
+    opacity: 0;
+    transform: rotate(-15deg) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+#rounded {
+  display: inline-block;
+  transform-origin: center;
+  animation: rotateRound 0.6s ease-out 1;
+}
+
+@keyframes rotateRound {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.borderRound {
+  border: 1px solid #ffffffa1;
+  padding: 2px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0px 0px 1px 3px;
+  margin: 2px;
+}
+
+#haeders {
+  width: 99vw;
+}
+
+
+
+#countWish{
+    position: absolute;
+    top: 8px;
+    right: 2.1%;
+    border: 1px solid;
+    padding: 0px 6px;
+    border-radius: 15px;
+    background: linear-gradient(45deg,rgb(0, 0, 0),rgb(50, 0, 151));
+}
+
+
+
+
+
+
+
+
+

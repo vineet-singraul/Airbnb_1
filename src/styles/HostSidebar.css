@@ -1,0 +1,151 @@
+body{
+  background: #000000 !important;
+
+}
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#airbnbHostLogo {
+  width: 100px;
+  border: 2px solid #000000;
+  padding: 10px;
+  border-radius: 12px;
+  background: linear-gradient(118deg, #02000d, #2000cf);
+}
+
+#AirLogoName{
+  color: #ff0000;
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-family: monospace;
+}
+
+#AirLogoHost{
+    font-family: cursive;
+    color: burlywood;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+
+.HostDhoverEffect .list-group-item:hover {
+  background-color: #00000095 !important;
+  color: #2000cf !important;
+  border-right: 8px solid #210095;
+}
+
+.active-link {
+  background-color: rgba(3, 11, 159, 0.583) !important;
+  color: rgb(255, 255, 255) !important;
+  border: none !important;
+  border-right: 8px solid rgb(0, 0, 67) !important;
+}
+
+
+.sublink{
+    border: none !important;
+    margin-left: 36px !important;
+    width: auto !important;
+}
+
+
+
+
+
+
+
+
+
+/* Header Ke LiyeHai Ye */
+#page-content-wrapper{
+  margin-left: 250px;
+  background-color: #121212 !important;
+}
+
+.navbar{
+    background: linear-gradient(213deg, #0003bfe3, #000000fa, #00008e);
+}
+
+
+.wlcmsgHost{
+  margin-left: 10px !important;
+  color: #fff !important;
+}
+
+
+#page-content-wrapper.full-width{
+  margin-left: 250px;
+}
+
+#page-content-wrapper.sort-width{
+  margin-left:0px;
+}
+
+
+
+
+
+
+/* HostSidebar.css */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 90, 95, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 90, 95, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 90, 95, 0);
+  }
+}
+
+.active-menu-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.active-menu-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #FF5A5F 0%, #FF385C 100%);
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Smooth transitions for sidebar */
+.sidebar-enter {
+  transform: translateX(-100%);
+}
+
+.sidebar-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.sidebar-exit {
+  transform: translateX(0);
+}
+
+.sidebar-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+}

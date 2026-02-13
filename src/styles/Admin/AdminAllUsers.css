@@ -1,0 +1,57 @@
+#MainAllUserCard {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: absolute;
+}
+
+@media (max-width: 480px) {
+  #mainAllHostDiv {
+    width:100vw;
+    height: 100vh;
+  }
+}
+
+
+@media (max-width: 480px) {
+#mainSecurityAdminDataGrid{
+  background-color: red !important;
+  width: 300px;
+}
+}
+
+
+
+#BG_Black_Clr_Black{
+  background-color:#e3e3e3;
+  color: rgb(0, 0, 0) !important;
+}
+
+
+#MainSetting{
+  width: 82%;
+}
+
+
+@media (max-width: 480px) {
+#MainSetting{
+  width: 100%;
+  /* height: vh; */
+}
+}
+
+
+#settinofAdmin{
+  width: 65vw !important;
+  /* height: 100vh !important; */
+}
+
+
+
+
+@media (max-width: 480px) {
+#settinofAdmin{
+  width: 40vw !important;
+}
+}
