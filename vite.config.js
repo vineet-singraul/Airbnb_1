@@ -19,3 +19,11 @@ export default defineConfig({
     port: 3000        // optional: port fix kar diya
   }
 })
+
+
+
+export default defineConfig({
+  build: {
+    chunkSizeWarningLimit: 1000
+  }
+})
