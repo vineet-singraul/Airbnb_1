@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa';
 import '../styles/hostLogin.css';
 import { toast, ToastContainer } from 'react-toastify';
-
+import 'react-toastify/dist/ReactToastify.css';
 const HostLogin = () => {
 
   const [showPassword, setShowPassword] = useState(false);
@@ -169,27 +169,25 @@ const HostLogin = () => {
           </form>
         </div>
       </div>
-      <ToastContainer
-        position="top-center"
-        autoClose={3000}             // Toast 3 seconds ke liye rahe
-        hideProgressBar={false}      // Progress bar dikhaye
-        newestOnTop={true}           // Naye toast upar
-        closeOnClick                  // Click karne par close ho jaye
-        rtl={false}                   // Right-to-left nahi
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        style={{
-          backgroundColor: '#1e293b', // dark blue background
-          color: '#f1f5f9',           // light text color
-          fontWeight: '600',
-          fontSize: '16px',
-          borderRadius: '12px',
-          padding: '12px 20px',
-          boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
-        }}
-      />
 
+<ToastContainer
+  position="top-center"
+  autoClose={3000}
+  hideProgressBar={false}
+  newestOnTop={true}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  style={{
+    fontWeight: '600',
+    fontSize: '16px',
+    borderRadius: '12px',
+    padding: '12px 20px',
+    boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
+  }}
+/>
     </div>
   );
 };
