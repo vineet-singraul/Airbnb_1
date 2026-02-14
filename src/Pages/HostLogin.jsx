@@ -65,12 +65,16 @@ const HostLogin = () => {
 
         if (response.status === 200) {
             localStorage.setItem("HostEmail", userEmail);
-            toast.success(data.message || "Login Successful!");
+            toast.success(data.message || "Login Successful!", {
+                style: { backgroundColor: '#16a34a', color: '#fff' } // green
+            });
             setTimeout(() => {
                 window.location.href = '/host-Manage-Profile';
             }, 2000);
         } else {
-            toast.error(data.message || "Login Failed!");
+            toast.error(data.message || "Login Successful!", {
+                style: { backgroundColor: '#dc2626', color: '#fff' } // red
+            });
         }
     } catch (error) {
         console.error("Error:", error);
